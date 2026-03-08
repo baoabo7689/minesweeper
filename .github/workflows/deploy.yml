@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build Next.js and export static site
+        env:
+          BASE_PATH: /nextjs_template
+        run: |
+          yarn build
+          # Prevent GitHub Pages from ignoring files/folders that start with an underscore
+          # by adding a .nojekyll file to the output directory
+          touch out/.nojekyll
+          npx next export
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          # Deploy to the `gh-pages` branch so built artifacts are kept
+          # separate from source (`main`). GitHub Pages can serve
+          # the static `out` folder from this branch. Change if
+          # you prefer deploying from `main`/`docs` instead.
+          branch: gh-pages
+          folder: out
+          token: ${{ secrets.GITHUB_TOKEN }}
