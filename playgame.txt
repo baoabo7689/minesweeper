@@ -1,5 +1,5 @@
 1:HL["/minesweeper/_next/static/css/d0241b270e53d07b.css","style",{"crossOrigin":""}]
-0:["w5uFnVDBTyziY0ycPhlBD",[[["",{"children":["playgame",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/minesweeper/_next/static/css/d0241b270e53d07b.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["16RV9ldni6iZ9ZZhjQnFd",[[["",{"children":["playgame",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/minesweeper/_next/static/css/d0241b270e53d07b.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[20,["701","static/chunks/701-c0831120c2051862.js","185","static/chunks/app/layout-911330487336f55c.js"],"LanguageProvider"]
 5:I[3204,["701","static/chunks/701-c0831120c2051862.js","185","static/chunks/app/layout-911330487336f55c.js"],""]
 6:I[6954,[],""]
